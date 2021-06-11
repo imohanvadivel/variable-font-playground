@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Font Playground</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <script>
+    let theme = localStorage.getItem("var-playground-darkMode");
+    if (theme && theme === "true") {
+      document.querySelector(":root").classList.add("dark");
+    }
+  </script>
+  <body>
+    <main class="loading">
+      <section class="lhs">
+        <header>
+          <ul class="plain compact flex content-type">
+            <li class="active">Sample</li>
+            <li class="p-long">Paragraph</li>
+            <li class="p-short">Para</li>
+          </ul>
+          <ul class="plain compact flex text-align">
+            <li class="active" data-align="left">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M16.25 3.75H7.5V5H16.25V3.75Z" />
+                <path d="M13.75 7.5H7.5V8.75H13.75V7.5Z" />
+                <path d="M16.25 11.25H7.5V12.5H16.25V11.25Z" />
+                <path d="M13.75 15H7.5V16.25H13.75V15Z" />
+                <path d="M5 2.5H3.75V17.5H5V2.5Z" />
+              </svg>
+            </li>
+            <li data-align="justify">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M16.25 3.75H3.75V5H16.25V3.75Z" />
+                <path d="M16.25 7.5H3.75V8.75H16.25V7.5Z" />
+                <path d="M16.25 11.25H3.75V12.5H16.25V11.25Z" />
+                <path d="M16.25 15H3.75V16.25H16.25V15Z" />
+              </svg>
+            </li>
+            <li data-align="center">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M16.25 3.75H3.75V5H16.25V3.75Z" />
+                <path d="M13.75 7.5H6.25V8.75H13.75V7.5Z" />
+                <path d="M16.25 11.25H3.75V12.5H16.25V11.25Z" />
+                <path d="M13.75 15H6.25V16.25H13.75V15Z" />
+              </svg>
+            </li>
+            <li data-align="right">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12.5 3.75H3.75V5H12.5V3.75Z" />
+                <path d="M12.5 7.5H6.25V8.75H12.5V7.5Z" />
+                <path d="M12.5 11.25H3.75V12.5H12.5V11.25Z" />
+                <path d="M12.5 15H6.25V16.25H12.5V15Z" />
+                <path d="M16.25 2.5H15V17.5H16.25V2.5Z" />
+              </svg>
+            </li>
+          </ul>
+          <div class="right-side">
+            <div class="file-input">
+              <span class="add-font single-line">Add Font</span>
+              <input type="file" accept=".ttf,.otf,.woff,.woff2,.dfont" />
+            </div>
+            <p class="opacity5 drag-drop">Drag & drop in the font file</p>
+            <div id="dark-mode">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.75 1.5H11.25V3.75H12.75V1.5Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M22.5 11.25H20.25V12.75H22.5V11.25Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M12.75 20.25H11.25V22.5H12.75V20.25Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M3.75 11.25H1.5V12.75H3.75V11.25Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M5.14806 4.102L4.0874 5.16266L5.67839 6.75365L6.73905 5.69299L5.14806 4.102Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M18.841 4.09466L17.25 5.68565L18.3107 6.74631L19.9017 5.15532L18.841 4.09466Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M18.3131 17.2517L17.2524 18.3123L18.8434 19.9033L19.9041 18.8427L18.3131 17.2517Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M4.10254 18.8475L5.69254 17.25L6.75004 18.315L5.16004 19.905L4.10254 18.8475Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+                <path
+                  d="M12 6C10.8133 6 9.65328 6.35189 8.66658 7.01118C7.67989 7.67047 6.91085 8.60754 6.45673 9.7039C6.0026 10.8003 5.88378 12.0067 6.11529 13.1705C6.3468 14.3344 6.91825 15.4035 7.75736 16.2426C8.59648 17.0818 9.66557 17.6532 10.8295 17.8847C11.9933 18.1162 13.1997 17.9974 14.2961 17.5433C15.3925 17.0892 16.3295 16.3201 16.9888 15.3334C17.6481 14.3467 18 13.1867 18 12C18 10.4087 17.3679 8.88258 16.2426 7.75736C15.1174 6.63214 13.5913 6 12 6ZM12 16.5C10.8065 16.5 9.66194 16.0259 8.81802 15.182C7.97411 14.3381 7.5 13.1935 7.5 12C7.5 10.8065 7.97411 9.66193 8.81802 8.81802C9.66194 7.97411 10.8065 7.5 12 7.5V16.5Z"
+                  fill="var(--foregroundColor)"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </header>
+        <div
+          translate="no"
+          spellcheck="false"
+          contenteditable="true"
+          class="test-area hide-scrollbar"
+          lang="en"
+        >
+          <p>
+            I am sure in some years from now you will see new posters with just
+            white space and four lines in Garamond.
+          </p>
+
+          <p>
+            Le point avec le type est que vous ne soyez pas conscient qu'il est
+            là. Si vous vous souvenez de la forme d'une cuillère avec laquelle
+            vous venez de manger de la soupe, la cuillère avait une mauvaise
+            forme.
+          </p>
+
+          <p>
+            Typography must often draw attention to itself before it will be
+            read. Yet in order to be read, it must relinquish the attention it
+            has drawn.
+          </p>
+
+          <table>
+            <tbody>
+              <tr>
+                <td>89 12/3</td>
+                <td class="right">293,987.00</td>
+                <td>780</td>
+              </tr>
+              <tr>
+                <td>45 34/78</td>
+                <td class="right">456.09</td>
+                <td>7389</td>
+              </tr>
+              <tr>
+                <td>81 90/31</td>
+                <td class="right">1,234.31</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>81 92/87</td>
+                <td class="right">3,231.31</td>
+                <td>928378</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            Si vous vous souvenez de la forme de votre cuillère au déjeuner,
+            elle doit être de la mauvaise forme. La cuillère et la lettre sont
+            des outils; l'un pour prendre de la nourriture dans le bol, l'autre
+            pour retirer des informations de la page ... Quand c'est un bon
+            design, le lecteur doit se sentir à l'aise car la lettre est à la
+            fois banale et belle.
+          </p>
+        </div>
+      </section>
+      <div class="seperator">
+        <div class="handle">&nbsp;</div>
+      </div>
+      <section class="rhs hide-scrollbar">
+        <!-- ------------------------- Type Detail ------------------------- -->
+        <div class="type-detail">
+          <h5>Type Details</h5>
+          <div class="rows">
+            <div>
+              <span>Full Name</span>
+              <span class="val">Recursive Sans</span>
+            </div>
+            <div><span>Designer</span> <span class="val">Arrow Type</span></div>
+            <div><span>Version</span> <span class="val">1.078</span></div>
+          </div>
+          <section class="rows-3">
+            <div class="primitive-input">
+              <span>Font Size</span>
+              <div id="font-size" class="slider">
+                <input type="range" value="32" min="8" step="1" max="120" />
+                <div class="progress" style="width: 21.4285714286%"></div>
+              </div>
+              <input
+                type="number"
+                class="font-size val-input"
+                value="32"
+                min="8"
+                step="1"
+                max="80"
+                autocomplete="off"
+              />
+            </div>
+            <div class="primitive-input">
+              <span>Line Height</span>
+              <div id="line-height" class="slider">
+                <input type="range" value="1.5" min="0" max="3" step="0.01" />
+                <div class="progress" style="width: 50%"></div>
+              </div>
+              <input
+                type="number"
+                class="line-height val-input"
+                value="1.5"
+                min="0"
+                max="3"
+                step="0.1"
+              />
+            </div>
+            <div class="primitive-input">
+              <span>Letter Spacing</span>
+              <div id="letter-spacing" class="slider">
+                <input type="range" value="0" min="-5" max="5" step="0.01" />
+                <div class="progress" style="width: 50%"></div>
+              </div>
+              <input
+                type="number"
+                class="letter-spacing val-input"
+                value="0"
+                min="-7"
+                max="7"
+                step="0.1"
+              />
+            </div>
+          </section>
+        </div>
+        <!-- ------------------------- Variable Axes ------------------------- -->
+        <div class="variable-axes">
+          <h5>Variable Axes</h5>
+          <section class="rows-3">
+            <div class="var-axes-set">
+              <div>Monospace</div>
+              <span class="slider">
+                <input
+                  type="range"
+                  class="var"
+                  value="0"
+                  data-axes="MONO"
+                  min="0"
+                  max="1"
+                />
+                <div class="progress" style="width: 0%"></div>
+              </span>
+              <span class="val">0</span>
+            </div>
+            <div class="var-axes-set">
+              <div>Casual</div>
+              <span class="slider">
+                <input
+                  type="range"
+                  class="var"
+                  value="0"
+                  data-axes="CASL"
+                  min="0"
+                  max="1"
+                />
+                <div class="progress" style="width: 0%"></div>
+              </span>
+              <span class="val">0</span>
+            </div>
+            <div class="var-axes-set">
+              <div>Weight</div>
+              <span class="slider">
+                <input
+                  type="range"
+                  class="var"
+                  value="300"
+                  data-axes="wght"
+                  min="300"
+                  max="1000"
+                />
+                <div class="progress" style="width: 0%"></div>
+              </span>
+              <span class="val">300</span>
+            </div>
+            <div class="var-axes-set">
+              <div>Slant</div>
+              <span class="slider">
+                <input
+                  type="range"
+                  class="var"
+                  value="0"
+                  data-axes="slnt"
+                  min="-15"
+                  max="0"
+                />
+                <div class="progress" style="width: 100%"></div>
+              </span>
+              <span class="val">0</span>
+            </div>
+            <div class="var-axes-set">
+              <div>Cursive</div>
+              <span class="slider">
+                <input
+                  type="range"
+                  class="var"
+                  value="0.5"
+                  step="0.5"
+                  data-axes="CRSV"
+                  min="0"
+                  max="1"
+                />
+                <div class="progress" style="width: 50%"></div>
+              </span>
+              <span class="val">0.5</span>
+            </div>
+            <div class="var-axes-set named-variation">
+              <div>Named Variation</div>
+              <select id="" class="faux-select">
+                <option value="">--Select--</option>
+              </select>
+            </div>
+            <div class="var-axes-set animate">
+              <div>Animate</div>
+              <select id="" class="faux-select">
+                <option value="">--Off--</option>
+              </select>
+            </div>
+          </section>
+        </div>
+        <!-- ------------------------- Open Type ------------------------- -->
+        <div class="open-type">
+          <h5>OpenType Features</h5>
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="aalt" type="checkbox" data-ot="aalt" />
+              <span></span>
+            </div>
+
+            <label for="aalt" class="exlp">Access All Alternates</label>
+            <span class="ext">aalt</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="afrc" type="checkbox" data-ot="afrc" />
+              <span></span>
+            </div>
+
+            <label for="afrc" class="exlp">Alternative Fractions</label>
+            <span class="ext">afrc</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="case" type="checkbox" data-ot="case" />
+              <span></span>
+            </div>
+
+            <label for="case" class="exlp">Case-Sensitive Forms</label>
+            <span class="ext">case</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="ccmp" type="checkbox" data-ot="ccmp" />
+              <span></span>
+            </div>
+
+            <label for="ccmp" class="exlp">Glyph Composition</label>
+            <span class="ext">ccmp</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="dlig" type="checkbox" data-ot="dlig" />
+              <span></span>
+            </div>
+
+            <label for="dlig" class="exlp">Discretionary Ligatures</label>
+            <span class="ext">dlig</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="dnom" type="checkbox" data-ot="dnom" />
+              <span></span>
+            </div>
+
+            <label for="dnom" class="exlp">Denominators</label>
+            <span class="ext">dnom</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="frac" type="checkbox" data-ot="frac" />
+              <span></span>
+            </div>
+
+            <label for="frac" class="exlp">Fractions</label>
+            <span class="ext">frac</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="liga" type="checkbox" checked="" data-ot="liga" />
+              <span></span>
+            </div>
+            <label for="liga" class="exlp">Standard Ligatures</label>
+            <span class="ext">liga</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="numr" type="checkbox" data-ot="numr" />
+              <span></span>
+            </div>
+
+            <label for="numr" class="exlp">Numerators</label>
+            <span class="ext">numr</span>
+          </div>
+
+          <div class="ot-set">
+            <div class="faux-checkbox">
+              <input id="ordn" type="checkbox" data-ot="ordn" />
+              <span></span>
+            </div>
+
+            <label for="ordn" class="exlp">Ordinals</label>
+            <span class="ext">ordn</span>
+          </div>
+        </div>
+        <footer>
+          <div class="flex">
+            <span class="opacity4"> Built by&nbsp;</span>
+            <a
+              href="https://www.twitter.com/imohanvadivel"
+              target="_blank"
+              class="plain twitter"
+            >
+              Mohan Vadivel</a
+            >
+          </div>
+          <a
+            target="_blank"
+            href="https://github.com/imohanvadivel/variable-font-playground"
+            class="github plain"
+          >
+            <svg
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.9999 1.375C8.71489 1.3753 6.50448 2.18857 4.76411 3.66932C3.02375 5.15006 1.86697 7.20169 1.50069 9.4572C1.13442 11.7127 1.58255 14.025 2.76493 15.9803C3.9473 17.9357 5.78678 19.4066 7.95432 20.13C8.43557 20.2194 8.64182 19.9237 8.64182 19.6694C8.64182 19.415 8.64182 18.8375 8.64182 18.0331C5.96745 18.6106 5.4037 16.7406 5.4037 16.7406C5.21563 16.1513 4.81982 15.6504 4.28995 15.3312C3.41682 14.74 4.3587 14.7469 4.3587 14.7469C4.66368 14.79 4.95477 14.9022 5.20976 15.0749C5.46475 15.2477 5.67688 15.4765 5.82995 15.7437C6.09625 16.2214 6.54133 16.5737 7.06733 16.7232C7.59334 16.8728 8.1572 16.8073 8.63495 16.5412C8.67376 16.0534 8.88882 15.5965 9.23995 15.2556C7.1087 15.0081 4.86057 14.1831 4.86057 10.4981C4.84498 9.54105 5.19966 8.61494 5.85057 7.91312C5.55595 7.08413 5.5904 6.17373 5.94682 5.36937C5.94682 5.36937 6.7512 5.10812 8.5937 6.3525C10.1691 5.92277 11.8308 5.92277 13.4062 6.3525C15.2418 5.10812 16.0462 5.36937 16.0462 5.36937C16.4026 6.17373 16.4371 7.08413 16.1424 7.91312C16.7934 8.61494 17.148 9.54105 17.1324 10.4981C17.1324 14.1969 14.8843 15.0081 12.7393 15.2487C12.9691 15.4816 13.1463 15.7611 13.2589 16.0682C13.3716 16.3754 13.4171 16.7031 13.3924 17.0294C13.3924 18.315 13.3924 19.3531 13.3924 19.6694C13.3924 19.9856 13.5643 20.2262 14.0799 20.13C16.2503 19.4057 18.0917 17.932 19.2739 15.973C20.4561 14.014 20.9018 11.698 20.531 9.44019C20.1602 7.18239 18.9972 5.13052 17.2506 3.65253C15.504 2.17453 13.288 1.36709 10.9999 1.375V1.375Z"
+                fill="var(--foregroundColor)"
+              ></path>
+            </svg>
+          </a>
+        </footer>
+      </section>
+      <div class="toast">
+        <div class="msg"></div>
+      </div>
+    </main>
+    <div class="loader">
+      <h1 class="large">Loading playground</h1>
+      <q class="center">
+        <p>
+          “Type is a beautiful group of letters, <br />
+          not a group of beautiful letters”
+        </p>
+        <em class="matthew">Matthew Carter</em>
+      </q>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "variable-font-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/imohanvadivel/variable-font-playground.git",
+  "author": "Mohan Vadivel <mohanvadivel@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "browserify --insert-globals -t brfs ./src/fontkit.js ./src/script.js -o ./main.js"
+  },
+  "dependencies": {
+    "brfs": "^2.0.2",
+    "fontkit": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/fontkit": "^1.8.0",
+    "browserify": "^17.0.0"
+  }
+}
