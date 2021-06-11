@@ -28,22 +28,22 @@ has drawn.
 <tbody>
   <tr>
     <td>89 12/3</td>
-    <td class="right">293,987.00</td>
+    <td class="text-right">293,987.00</td>
     <td>780</td>
   </tr>
   <tr>
     <td>45 34/78</td>
-    <td class="right">456.09</td>
+    <td class="text-right">456.09</td>
     <td>7389</td>
   </tr>
   <tr>
     <td>81 90/31</td>
-    <td class="right">1,234.31</td>
+    <td class="text-right">1,234.31</td>
     <td>23</td>
   </tr>
   <tr>
     <td>81 92/87</td>
-    <td class="right">3,231.31</td>
+    <td class="text-right">3,231.31</td>
     <td>928378</td>
   </tr>
 </tbody>
