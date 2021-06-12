@@ -44,7 +44,7 @@ table {
   --baseMonoFontSize: 14;
 
   --sansFont: "Inter";
-  --monoFont: "SF Mono, Roboto Mono Var, Roboto Mono,JetBrains Mono";
+  --monoFont: "SF Mono", "Roboto Mono Var","JetBrains Mono", monospace;
 
   --sansFontSize: calc(var(--baseSansFontSize) * 1rem / 16);
   --monoFontSize: calc(var(--baseMonoFontSize) * 1rem / var(--baseSansFontSize));
@@ -124,7 +124,7 @@ table {
 @supports (font-variation-settings: normal){
   :root{
     --sansFont: "Inter var";
-    --monoFont: "JetBrains Mono var";
+    --monoFont: "SF Mono", "Roboto Mono Var","JetBrains Mono", monospace;
   }
 }
 
@@ -406,23 +406,6 @@ a.plain{
   text-decoration: none;
   white-space: unset;
   color: inherit;
-}
-
-/* image
-================================ */
-img, img:first-child, img:last-child {
-  display:block;
-  margin-top: var(--baseline);
-  margin-bottom: var(--baseline);
-}
-img:only-child { margin:0 }
-* + img { margin-top: calc(var(--baseline) * -1); }
-img.fill, img.cover { -o-object-fit: cover; object-fit: cover }
-.grid > div > img, .grid > section > img, .grid > article > img, .grid > aside > img,
-.grid > div > p > img, .grid > section > p > img, .grid > article > p > img, .grid > aside > p > img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-width: 100%;
 }
 
 
