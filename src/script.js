@@ -248,7 +248,7 @@ const sampleData = require("./data");
 
       // Setting initial Value
       OTfeatures.forEach((x) => {
-        if (x == "kern" || x == "rvrn" || x == "liga") {
+        if (x == "kern" || x == "rvrn" || x == "liga" || x == "calt") {
           testArea.style.setProperty(`--${x}`, 1);
         } else {
           testArea.style.setProperty(`--${x}`, 0);
