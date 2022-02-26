@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Font Playground</title>
+
+    <meta name="description" content="Simple tool for fiddling, animating variable axes and exploring OpenType features within the font." />
     <meta name="google" content="notranslate" />
     <meta name="theme-color" content="#fff" />
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-    <title>Font Playground</title>
-    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="manifest" href="./dist/manifest.json" />
+    <link rel="shortcut icon" href="./dist/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./dist/192_maskable.png" type="image/png" />
+    
+    <link rel="stylesheet" href="./dist/style.css" />
   </head>
   <script>
     let theme = localStorage.getItem("var-playground-darkMode");
@@ -461,8 +468,8 @@
             >
           </div>
           <a
-            target="_blank"
             href="https://github.com/imohanvadivel/variable-font-playground"
+            target="_blank"
             class="github plain"
           >
             <svg
@@ -486,7 +493,7 @@
     </main>
     <div class="loader">
       <h1 class="large">Loading playground</h1>
-      <q class="center">
+      <q class="text-center">
         <p>
           “Type is a beautiful group of letters, <br />
           not a group of beautiful letters”
@@ -495,5 +502,11 @@
       </q>
     </div>
   </body>
-  <script src="./main.js"></script>
+
+  <script src="./dist/script.js"></script>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
 </html>

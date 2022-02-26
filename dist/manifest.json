@@ -1,0 +1,23 @@
+{
+  "short_name": "Font Playground",
+  "name": "Variable Font Playground",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./192_maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/projects/font-playground",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/projects/font-playground",
+  "theme_color": "#fff",
+  "description": "Variable font playground"
+}

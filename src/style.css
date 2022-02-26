@@ -1,4 +1,4 @@
-@import './src/Grid.css';
+@import 'grilles/grille.css';
 
 :root {
   --baseSansFontSize: 12;
@@ -481,13 +481,13 @@ input[type="range"]::-webkit-slider-runnable-track {
   fill: var(--foregroundColor);
 
   background: rgba(var(--foregroundColor-rgb), 0.05);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTggMTAuOTk5OEwzIDUuOTk5OEwzLjcgNS4yOTk4TDggOS41OTk4TDEyLjMgNS4yOTk4TDEzIDUuOTk5OEw4IDEwLjk5OThaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPC9zdmc+Cg==);
+  background-image: url("./assets/arrow-black.svg");
   background-repeat: no-repeat;
   background-position: center right 0.6666666667rem;
 }
 .dark .faux-select {
   background: rgba(var(--foregroundColor-rgb), 0.08);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTggMTAuOTk5OEwzIDUuOTk5OEwzLjcgNS4yOTk4TDggOS41OTk4TDEyLjMgNS4yOTk4TDEzIDUuOTk5OEw4IDEwLjk5OThaIiBmaWxsPSIjZGRkZGRkIi8+Cjwvc3ZnPgo=);
+  background-image: url("./assets/arrow-white.svg");
   background-repeat: no-repeat;
   background-position: center right 0.6666666667rem;
 }

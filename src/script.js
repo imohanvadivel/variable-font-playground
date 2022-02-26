@@ -90,7 +90,7 @@ const sampleData = require("./data");
   // Default font loading
   function loadDefaultFont() {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "/fonts/recursive/Recursive_VF_1.078.woff2");
+    xhr.open("GET", "./fonts/Recursive_VF_1.078.woff2");
     xhr.responseType = "arraybuffer";
 
     xhr.onload = function (e) {
@@ -175,10 +175,14 @@ const sampleData = require("./data");
   function setFontProps(font) {
     const nameRecord = font.name.records;
 
-    family = "familyName" in font ? font.familyName : `Not Available`;
+    family = "familyName" in font ? font.familyName : `test`;
+    // Adding "_test" suffix for avoiding collison
+    if(family !== `Not Available`) family = `${family}_test`;
+
     fullName = checkData("fullName", nameRecord);
     designer = checkData("designer", nameRecord);
     version = getVersion(checkData("version", nameRecord));
+
 
     function checkData(prop, nameRecord) {
       if (prop in nameRecord) {
@@ -825,4 +829,19 @@ const sampleData = require("./data");
       }
     }
   });
+
+  // Listening for message from service worker
+  // ---------------------------------------------------------------
+  if (window.BroadcastChannel) {
+    let channel = new BroadcastChannel("varfont-refresh");
+    channel.onmessage = function (e) {
+      let initial = localStorage.getItem("font-initial");
+      if (!initial) {
+        localStorage.setItem("font-initial", "true");
+      } else {
+        toastMessage("Refresh the page for new updates to take effect", 8000);
+      }
+    };
+  }
 })();
+
