@@ -10,7 +10,7 @@
   "dependencies": {
     "brfs": "^2.0.2",
     "fontkit": "^1.8.1",
-    "grilles": "^1.0.5"
+    "grilles": "^1.0.6"
   },
   "devDependencies": {
     "@types/fontkit": "^1.8.0",
