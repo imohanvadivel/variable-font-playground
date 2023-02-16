@@ -214,12 +214,12 @@ const sampleData = require("./data");
           var option = {};
         }
 
-        var newFont = new FontFace(family, source, option);
+        var newFont = new FontFace(`${family}`, source, option);
 
         setFontVariationSettings();
         setFontFeatureSettings();
       } else {
-        var newFont = new FontFace(family, source);
+        var newFont = new FontFace(`${family}`, source);
       }
       await newFont.load();
       document.fonts.add(newFont);
@@ -232,8 +232,8 @@ const sampleData = require("./data");
 
     isDefaultFontLoaded = true;
 
-    console.log(`font family ${family} loaded`);
-    testArea.style.fontFamily = family;
+    console.log(`font family "${family}" loaded`);
+    testArea.style.fontFamily = `"${family}"`;
 
     function setFontVariationSettings() {
       let axesAry = Object.keys(variableAxes);

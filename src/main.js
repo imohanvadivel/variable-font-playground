@@ -13234,7 +13234,7 @@ function _applyDecoratedDescriptor$1(target, property, decorators, descriptor, c
 }
 try {
     var iconv = function () {
-            throw new Error('Cannot find module \'iconv-lite\' from \'/Users/mohan-temp/Desktop/variable-font-playground/node_modules/fontkit\'');
+            throw new Error('Cannot find module \'iconv-lite\' from \'/Users/mohan/Desktop/variable-font-playground/node_modules/fontkit\'');
         }();
 } catch (err) {
 }
@@ -40817,7 +40817,7 @@ module.exports = function shimFlags() {
     var DecodeStream, iconv;
     try {
         iconv = function () {
-            throw new Error('Cannot find module \'iconv-lite\' from \'/Users/mohan-temp/Desktop/variable-font-playground/node_modules/restructure/src\'');
+            throw new Error('Cannot find module \'iconv-lite\' from \'/Users/mohan/Desktop/variable-font-playground/node_modules/restructure/src\'');
         }();
     } catch (_error) {
     }
@@ -40924,7 +40924,7 @@ module.exports = function shimFlags() {
     DecodeStream = require('./DecodeStream');
     try {
         iconv = function () {
-            throw new Error('Cannot find module \'iconv-lite\' from \'/Users/mohan-temp/Desktop/variable-font-playground/node_modules/restructure/src\'');
+            throw new Error('Cannot find module \'iconv-lite\' from \'/Users/mohan/Desktop/variable-font-playground/node_modules/restructure/src\'');
         }();
     } catch (_error) {
     }
@@ -47985,12 +47985,12 @@ const sampleData = require("./data");
           var option = {};
         }
 
-        var newFont = new FontFace(family, source, option);
+        var newFont = new FontFace(`${family}`, source, option);
 
         setFontVariationSettings();
         setFontFeatureSettings();
       } else {
-        var newFont = new FontFace(family, source);
+        var newFont = new FontFace(`${family}`, source);
       }
       await newFont.load();
       document.fonts.add(newFont);
@@ -48003,8 +48003,8 @@ const sampleData = require("./data");
 
     isDefaultFontLoaded = true;
 
-    console.log(`font family ${family} loaded`);
-    testArea.style.fontFamily = family;
+    console.log(`font family "${family}" loaded`);
+    testArea.style.fontFamily = `"${family}"`;
 
     function setFontVariationSettings() {
       let axesAry = Object.keys(variableAxes);
